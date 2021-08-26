@@ -12,6 +12,12 @@ const chees = (width, height, symbol) => {
             reason : 'please, put width, length and symbol to the function call'
         };
         return invalidData;
+    }else if(typeof(symbol) != 'string'){
+        let invalidData = {
+            status : 'failed',
+            reason : 'symbol must be a string'
+        }
+        return invalidData;
     }else{ 
         for (let i = 0; i < height; i += 1) {
             for (let j = 0; j < width; j += 1) {

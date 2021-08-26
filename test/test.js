@@ -1,15 +1,15 @@
-describe('pow task1', function(){
-    it('chees(1, 2, "x") return 2 rows', function(){
+describe('Task 1', function(){
+    it('function work correctly', function(){
         let str = 'x \n x \n';
         assert.equal(chees(1, 2, "x"), str);
     });
     it('type is string', function(){
-        let str = 'x \n x \n';
         assert.typeOf(chees(1, 2, "x"), 'string');
     });
     it('symbol is correct', function(){
-        let result = chees(5, 5, 'x').slice(0, 1);
-        assert.equal(result, 'x');
+        let symbol = 'x';
+        let result = chees(5, 5, symbol).slice(0, 1);
+        assert.equal(result, symbol);
     });    
     it('width is bigger than 0', function(){
         let invalidData = {
@@ -35,12 +35,24 @@ describe('pow task1', function(){
         
         assert.equal(resultString, invalidDataString);
     });
-    it('function call params is not empty', function(){
+    it('function call arguments is not empty', function(){
         let invalidData = {
             status : 'failed',
             reason : 'please, put width, length and symbol to the function call'
         };
         let result = chees();
+
+        let invalidDataString = JSON.stringify(invalidData);
+        let resultString = JSON.stringify(result);
+
+        assert.equal(resultString, invalidDataString);
+    });
+    it('symbol is a string', function(){
+        let invalidData = {
+            status : 'failed',
+            reason : 'symbol must be a string'
+        }
+        let result = chees(2,2,1);
 
         let invalidDataString = JSON.stringify(invalidData);
         let resultString = JSON.stringify(result);
