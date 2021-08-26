@@ -28,6 +28,3 @@ export const chees = (width, height, symbol) => {
         return result;
     }
 }
-
-let res = chees(1, 2, 'x');
-console.log(res);
