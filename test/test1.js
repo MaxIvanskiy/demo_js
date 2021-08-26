@@ -21,10 +21,7 @@ export const test1 = (assert) => {
             };
             let result = chees(0, 5, 'x');
 
-            let invalidDataString = JSON.stringify(invalidData);
-            let resultString = JSON.stringify(result);
-
-            assert.equal(resultString, invalidDataString);
+            assert.deepEqual(result, invalidData);
         });
         it('height is bigger than 0', function(){
             let invalidData = {
@@ -32,11 +29,8 @@ export const test1 = (assert) => {
                 reason : 'width and height must be bigger than 0'
             };
             let result = chees(25, 0, 'x');
-
-            let invalidDataString = JSON.stringify(invalidData);
-            let resultString = JSON.stringify(result);
-            
-            assert.equal(resultString, invalidDataString);
+           
+            assert.deepEqual(result, invalidData);
         });
         it('function call arguments is not empty', function(){
             let invalidData = {
@@ -45,10 +39,7 @@ export const test1 = (assert) => {
             };
             let result = chees();
 
-            let invalidDataString = JSON.stringify(invalidData);
-            let resultString = JSON.stringify(result);
-
-            assert.equal(resultString, invalidDataString);
+            assert.deepEqual(result, invalidData);
         });
         it('symbol is a string', function(){
             let invalidData = {
@@ -57,10 +48,7 @@ export const test1 = (assert) => {
             }
             let result = chees(2,2,1);
 
-            let invalidDataString = JSON.stringify(invalidData);
-            let resultString = JSON.stringify(result);
-
-            assert.equal(resultString, invalidDataString);
+            assert.deepEqual(result, invalidData);
         });
     });
 }

@@ -20,11 +20,14 @@ export const chees = (width, height, symbol) => {
         return invalidData;
     }else{ 
         for (let i = 0; i < height; i += 1) {
-            for (let j = 0; j < width; j += 1) {
+            for (let j = 0; j < width / 2; j += 1) {
                 result = `${result}${symbol} `;
             }
-            i % 2 ? result = `${result}\n` : result = `${result}\n `
+            result = i % 2 ? `${result}\n` : `${result}\n `
          }
         return result;
     }
 }
+
+let res = chees(1, 2, 'x');
+console.log(res);
