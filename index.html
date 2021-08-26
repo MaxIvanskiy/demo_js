@@ -1,31 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- добавим стили mocha для отображения результатов -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
-        <!-- добавляем сам фреймворк mocha -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
-        <script>
-          // включаем режим тестирования в стиле BDD
-          mocha.setup('bdd');
-        </script>
-        <!-- добавим chai -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
-        <script>
-          // chai предоставляет большое количество функций. Объявим assert глобально
-          let assert = chai.assert;
-        </script>
-        <script src="src/task1.js"></script>
-        <script src="main.js"></script>
-        <script src="test/test1.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/9.1.0/mocha.css" integrity="sha512-Ytt2foRGKdIInPXwyS3gxRvfTv4n2wi7uB7neCLH1LjExT+PKBeQu6LNVB4QpHaJqx7m2btagBs4kqxYC1QNFg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/9.1.0/mocha.js" integrity="sha512-8yPgscBVJ0VPhdPt4FRCmk452obMrklnyzWBQEW97k0O044IlvA2qePa4+/j05oh1V6aRkAcGAEagDRqvNXX0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.3.4/chai.js" integrity="sha512-qDtXqvTiGAZbBw0oXQl0DdO2Zcf91U6Qy8at56bzyj5DSJ0pMJefTbQgkaCl1vvo+rkqd8tmZH4pH6uPPMjd9A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+       
       </head>
       <body>
-        <!-- элемент с id="mocha" будет содержать результаты тестов -->
         <div id="mocha"></div>
       
-        <!-- запускаем тесты! -->
-        <script>
-          mocha.run();
-        </script>
+        <script type='module' src="main.js"></script>
       </body>
 </html>

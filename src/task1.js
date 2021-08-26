@@ -1,4 +1,4 @@
-const chees = (width, height, symbol) => {
+export const chees = (width, height, symbol) => {
     let result = '';
     if(width <= 0 || height <= 0){
         let invalidData = {
