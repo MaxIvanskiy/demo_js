@@ -1,4 +1,4 @@
-import { envelopes } from '../src/task2.js';
+import { checkEnv } from '../src/task2.js';
 
 export const test2 = (assert) => {
     describe('Task 2', () => {
@@ -11,7 +11,7 @@ export const test2 = (assert) => {
                 a : 2,
                 b : 3
             };
-            let result = envelopes(firstEnvelope, secondEnvelope);
+            let result = checkEnv(firstEnvelope, secondEnvelope);
             assert.equal(result, 0); 
         });
         it('can put second envelope to first', () => {
@@ -23,7 +23,7 @@ export const test2 = (assert) => {
                 a : 1,
                 b : 2
             };
-            let result = envelopes(firstEnvelope, secondEnvelope);
+            let result = checkEnv(firstEnvelope, secondEnvelope);
             assert.equal(result, 1); 
         });
         it('can put first envelope to second', () => {
@@ -35,7 +35,7 @@ export const test2 = (assert) => {
                 a : 5,
                 b : 8
             };
-            let result = envelopes(firstEnvelope, secondEnvelope);
+            let result = checkEnv(firstEnvelope, secondEnvelope);
             assert.equal(result, 2); 
         });
         it('function have arguments', () => {
@@ -43,7 +43,7 @@ export const test2 = (assert) => {
                 status : 'failed',
                 reason : 'function need 2 arguments'
             };
-            let result = envelopes();
+            let result = checkEnv();
             assert.deepEqual(result, invalidData); 
         });
         it('function call arguments is objects', () => {
@@ -53,7 +53,7 @@ export const test2 = (assert) => {
                 status : 'failed',
                 reason : 'arguments must be an objects'
             };
-            let result = envelopes(firstEnvelope, secondEnvelope);
+            let result = checkEnv(firstEnvelope, secondEnvelope);
             assert.deepEqual(result, invalidData); 
         });
     });
