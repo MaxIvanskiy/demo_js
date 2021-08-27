@@ -27,6 +27,15 @@ export const checkEnv = (envFirst, envSecond) => {
     }else{
         const firstRotated = rotateEnv(envFirst);
         const secondRotated = rotateEnv(envSecond);
+
+        if(firstRotated.max > 1000 || secondRotated.max > 1000 || firstRotated.min <= 0 || secondRotated.min <= 0){
+            const invalidData = {
+                status : 'failed',
+                reason : 'side length min 0 - max 1000'
+            };
+            return invalidData;
+        }
+
         if(firstRotated.max < secondRotated.max && firstRotated.min < secondRotated.min){
             result = 2;
         }else if(firstRotated.max > secondRotated.max && firstRotated.min > secondRotated.min){
@@ -35,7 +44,6 @@ export const checkEnv = (envFirst, envSecond) => {
             result = 0;
         }
     }
-    console.log(result);
     return result;
 }
 

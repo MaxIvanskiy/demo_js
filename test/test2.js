@@ -3,39 +3,24 @@ import { checkEnv } from '../src/task2.js';
 export const test2 = (assert) => {
     describe('Task 2', () => {
         it('can\'t put envelopes', () => {
-            const firstEnvelope = {
-                a : 2,
-                b : 3
-            };
-            const secondEnvelope = {
-                a : 2,
-                b : 3
-            };
-            let result = checkEnv(firstEnvelope, secondEnvelope);
+            const firstEnv = { a : 15, b : 20 };
+            const secondEnv = { c : 25, b : 14};
+
+            let result = checkEnv(firstEnv, secondEnv);
             assert.equal(result, 0); 
         });
         it('can put second envelope to first', () => {
-            const firstEnvelope = {
-                a : 2,
-                b : 3
-            };
-            const secondEnvelope = {
-                a : 1,
-                b : 2
-            };
-            let result = checkEnv(firstEnvelope, secondEnvelope);
+            const firstEnv = { a : 25, b : 20 };
+            const secondEnv = { c : 19.98, b : 24};
+
+            let result = checkEnv(firstEnv, secondEnv);
             assert.equal(result, 1); 
         });
         it('can put first envelope to second', () => {
-            const firstEnvelope = {
-                a : 1,
-                b : 2
-            };
-            const secondEnvelope = {
-                a : 5,
-                b : 8
-            };
-            let result = checkEnv(firstEnvelope, secondEnvelope);
+            const firstEnv = { a : 25, b : 20 };
+            const secondEnv = { c : 23, b : 30};
+
+            let result = checkEnv(firstEnv, secondEnv);
             assert.equal(result, 2); 
         });
         it('function have arguments', () => {
@@ -47,14 +32,24 @@ export const test2 = (assert) => {
             assert.deepEqual(result, invalidData); 
         });
         it('function call arguments is objects', () => {
-            const firstEnvelope = 'x';
-            const secondEnvelope = 5;
+            const firstEnv = 'x';
+            const secondEnv = 5;
             const invalidData = {
                 status : 'failed',
                 reason : 'arguments must be an objects'
             };
-            let result = checkEnv(firstEnvelope, secondEnvelope);
+            let result = checkEnv(firstEnv, secondEnv);
             assert.deepEqual(result, invalidData); 
+        });
+        it('envelope side length 0 - 1000', () => {
+            const firstEnv = { a : 1001, b : 999 };
+            const secondEnv = { c : 50, b : 5};
+            const invalidData = {
+                status : 'failed',
+                reason : 'side length min 0 - max 1000'
+            };
+            let result = checkEnv(firstEnv, secondEnv);
+            assert.deepEqual(result, invalidData);
         });
     });
 }
