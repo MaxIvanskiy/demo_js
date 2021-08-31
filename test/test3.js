@@ -14,17 +14,17 @@ export const test3 = (assert) => {
         });
         it('function call have argument', () => {
             const result = task3();
-            assert.equal(result, false);
+            assert.isFalse(result);
         });
         it('function call argument is Array', () => {
             let triangles = 'argument must be an Array';
             const result = task3(triangles);
-            assert.equal(result, false);
+            assert.isFalse(result);
         });
         it('function call argument is Array of objects', () => {
             let triangles = [ 5, 'string' ];
             const result = task3(triangles);
-            assert.equal(result, false);
+            assert.isFalse(result);
         });
         it('triangles sides bigger than 0 max 65536', () => {
             const triangles = [ 
@@ -33,7 +33,7 @@ export const test3 = (assert) => {
                 { vertices : 'UPG', u : 50, p : 50, g : 50 } 
             ];
             const result = task3(triangles);
-            assert.equal(result, false);
+            assert.isFalse(result);
         });
     });
 }

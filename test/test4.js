@@ -19,11 +19,11 @@ export const test4 = (assert) => {
         });
         it('function call have arguments', () => {
             let result = task4();
-            assert.equal(result, false);
+            assert.isFalse(result);
         });
         it('function call argument is a \'number\'', () => {
             let result = task4('not a number');
-            assert.equal(result, false);
+            assert.isFalse(result);
         });
     });
 }
