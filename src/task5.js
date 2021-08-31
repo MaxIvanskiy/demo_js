@@ -1,7 +1,6 @@
-
-let context = {
-    min : 123456,
-    max : 134654
+let context = { 
+    min : 321654, 
+    max : 654321 
 };
 
 export const task5 = (tickets) => {
