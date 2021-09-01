@@ -1,10 +1,5 @@
-let contextMinMax = {
-    min : 10,
-    max : 10000
-};
-let contextLength = {
-    length : 10
-};
+let contextMinMax = { min : 10, max : 46367 };
+let contextLength = { length : 10 };
 
 export const task7 = (context) => {
     if(context == undefined){
@@ -16,13 +11,11 @@ export const task7 = (context) => {
         if( (context.min && context.max) && context.min > 0 && context.max <= 2000000000 ){
             if(result.length == 0){
                 result.push(0, 1);
-            }      
-            while(result[result.length-1] < context.max){
-                let newEl = result[result.length-1] + result[result.length-2];
-                if(newEl > context.max){
-                    break;
-                }
+            }
+            let newEl = result[result.length-1] + result[result.length-2];
+            while(newEl < context.max){                
                 result.push(newEl);
+                newEl = result[result.length-1] + result[result.length-2];
             }
             let min = result.findIndex(el => el >= context.min);
             result.splice(0, min);
