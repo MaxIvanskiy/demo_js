@@ -12,7 +12,7 @@ export const test6 = (assert) => {
             let rowLen = 10;
             let minPow = 25;
             let result = task6(rowLen, minPow);
-            assert.typeOf(result, 'string');
+            assert.isString(result);
         });
         it('result length is equal to expected length', () => {
             let rowLen = 10;

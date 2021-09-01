@@ -23,4 +23,4 @@ export const task6 = (len, pow) => {
         return result;
     }
 }
-task6(rowLen, minPow);
+console.log(task6(rowLen, minPow));
