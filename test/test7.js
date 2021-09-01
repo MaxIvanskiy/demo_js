@@ -1,7 +1,7 @@
 import { task7 } from '../src/task7.js';
 
 export const test7 = (assert) => {
-    describe('Task 7', () => {
+    describe('Task 7 (fibonacci)', () => {
         it('function return array', () => {
             let context = { length : 10 };
             let result = task7(context);

@@ -1,7 +1,7 @@
 import { task6 } from '../src/task6.js';
 
 export const test6 = (assert) => {
-    describe('Task 6', () => {
+    describe('Task 6 (row of numbers)', () => {
         it('function work correctly', () => {
             let rowLen = 10;
             let minPow = 25;

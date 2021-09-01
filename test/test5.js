@@ -1,7 +1,7 @@
 import { task5 } from '../src/task5.js';
 
 export const test5 = (assert) => {
-    describe('Task 5', () => {
+    describe('Task 5 (happy tickets)', () => {
         it('Function work correctly', () => {
             let context = { min : 321654, max : 654321 };
             let positive = {

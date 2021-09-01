@@ -1,17 +1,17 @@
-import { chees } from '../src/task1.js';
+import { chess } from '../src/task1.js';
 
 export const test1 = (assert) => {
-    describe('Task 1', () => {
+    describe('Task 1 (chess)', () => {
         it('function work correctly', () => {
             let str = 'x \n x \n';
-            assert.equal(chees(1, 2, "x"), str);
+            assert.equal(chess(1, 2, "x"), str);
         });
         it('type is string', () => {
-            assert.isString(chees(1, 2, "x"));
+            assert.isString(chess(1, 2, "x"));
         });
         it('symbol is correct', () => {
             let symbol = 'x';
-            let result = chees(5, 5, symbol).slice(0, 1);
+            let result = chess(5, 5, symbol).slice(0, 1);
             assert.equal(result, symbol);
         });    
         it('width is bigger than 0', () => {
@@ -19,7 +19,7 @@ export const test1 = (assert) => {
                 status : 'failed',
                 reason : 'width and height must be bigger than 0'
             };
-            let result = chees(0, 5, 'x');
+            let result = chess(0, 5, 'x');
 
             assert.deepEqual(result, invalidData);
         });
@@ -28,7 +28,7 @@ export const test1 = (assert) => {
                 status : 'failed',
                 reason : 'width and height must be bigger than 0'
             };
-            let result = chees(25, 0, 'x');
+            let result = chess(25, 0, 'x');
            
             assert.deepEqual(result, invalidData);
         });
@@ -37,7 +37,7 @@ export const test1 = (assert) => {
                 status : 'failed',
                 reason : 'please, put width, length and symbol to the function call'
             };
-            let result = chees();
+            let result = chess();
 
             assert.deepEqual(result, invalidData);
         });
@@ -46,7 +46,7 @@ export const test1 = (assert) => {
                 status : 'failed',
                 reason : 'symbol must be a string'
             }
-            let result = chees(2,2,1);
+            let result = chess(2,2,1);
 
             assert.deepEqual(result, invalidData);
         });

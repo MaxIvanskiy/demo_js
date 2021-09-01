@@ -1,7 +1,7 @@
 import { task4 } from '../src/task4.js';
 
 export const test4 = (assert) => {
-    describe('Task 4', () => {
+    describe('Task 4 (palindrom)', () => {
         it('palindrom', () => {
             let number = 1234437;
             let result = task4(number);

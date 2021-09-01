@@ -1,7 +1,7 @@
 import { checkEnv } from '../src/task2.js';
 
 export const test2 = (assert) => {
-    describe('Task 2', () => {
+    describe('Task 2 (envelopes)', () => {
         it('can\'t put envelopes', () => {
             const firstEnv = { a : 15, b : 20 };
             const secondEnv = { c : 25, b : 14};

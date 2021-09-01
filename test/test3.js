@@ -1,7 +1,7 @@
 import { task3 } from '../src/task3.js';
 
 export const test3 = (assert) => {
-    describe('Task 3', () => {
+    describe('Task 3 (triangles)', () => {
         it('function work correctly', () => {
             const triangles = [ 
                 { vertices : 'ABC', a : 40, b : 40, c : 40 }, 
