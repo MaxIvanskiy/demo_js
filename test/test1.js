@@ -7,7 +7,7 @@ export const test1 = (assert) => {
             assert.equal(chees(1, 2, "x"), str);
         });
         it('type is string', () => {
-            assert.typeOf(chees(1, 2, "x"), 'string');
+            assert.isString(chees(1, 2, "x"));
         });
         it('symbol is correct', () => {
             let symbol = 'x';

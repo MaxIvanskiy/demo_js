@@ -27,4 +27,4 @@ export const chees = (width, height, symbol) => {
          }
         return result;
     }
-}
+} 
