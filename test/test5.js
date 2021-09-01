@@ -20,7 +20,7 @@ export const test5 = (assert) => {
         it('Function return Object', () => {
             let context = { min : 321654, max : 654321 };
             let result = task5(context);
-            assert.typeOf(result, 'Object');
+            assert.isObject(result);
         }); 
         it('function call have arguments', () => {
             let result = task5();
