@@ -8,7 +8,7 @@ export const task7 = (context) => {
         return false;
     }else{
         let result = [];
-        if( (context.min && context.max) && context.min > 0 && context.max <= 2000000000 ){
+        if( (context.min && context.max) && (context.min < context.max) && (context.min > 0) && (context.max <= 2000000000) ){
             if(result.length == 0){
                 result.push(0, 1);
             }

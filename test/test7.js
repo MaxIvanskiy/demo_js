@@ -41,6 +41,12 @@ export const test7 = (assert) => {
             result = task7(context);            
             assert.isFalse(result);
         });
+        it('function argument min < max', () => {
+            context = { min : 301, max : 300 };
+            let result = task7(context);
+            assert.isFalse(result);
+
+        });
         it('function argument min > 0, max < 2000000000', () => {
             let context = { min : 0, max : 10000 };
             let result = task7(context);
