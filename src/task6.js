@@ -2,7 +2,7 @@ let rowLen = 10;
 let minPow = 25;
 
 export const task6 = (len, pow) => {
-    if(len == undefined || pow == undefined){
+    if(task6.length != 2){
         return false;
     }if(typeof(len) != 'number' || typeof(pow) != 'number'){
         return false;

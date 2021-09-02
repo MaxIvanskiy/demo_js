@@ -2,7 +2,8 @@ let contextMinMax = { min : 10, max : 46367 };
 let contextLength = { length : 10 };
 
 export const task7 = (context) => {
-    if(context == undefined){
+    if(task7.length != 1){
+    // if(context == undefined){
         return false;
     }else if(typeof(context) != 'object' || Array.isArray(context)){
         return false;
